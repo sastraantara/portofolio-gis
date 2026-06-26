@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIS & Remote Sensing Expert Portfolio</title>
+    <meta name="description" content="Portfolio of a GIS & Remote Sensing Expert and Certified Drone Pilot based in Indonesia.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Leaflet CSS for Maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Background animations -->
+    <div class="gis-background">
+        <div class="grid-overlay"></div>
+        <div class="topographic-overlay"></div>
+        <div class="satellite-orbit">
+            <i class="fa-solid fa-satellite satellite-icon"></i>
+        </div>
+        <i class="fa-solid fa-plane-up drone-marker"></i>
+        <div class="radar-ping"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-content">
+            <div class="logo">Hello, I'm <span>Sony Sastraantara</span></div>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1 class="fade-in-up" style="animation-delay: 0.3s;">GIS & Remote Sensing <span>Expert</span></h1>
+            <h2 class="fade-in-up" style="animation-delay: 0.5s;">Master's in Marine Technology & Certified Drone Pilot</h2>
+            <p class="fade-in-up" style="animation-delay: 0.7s;">Transforming spatial data into actionable insights through advanced analytical models, machine learning, and high-precision mapping technologies.</p>
+            <div class="hero-buttons fade-in-up" style="animation-delay: 0.9s;">
+                <a href="#experience" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                <a href="Sony_Sastraantara_CV.pdf" download="Sony_Sastraantara_CV.pdf" class="btn btn-outline"><i class="fa-solid fa-download"></i> Download CV</a>
+            </div>
+        </div>
+        <a href="#expertise" class="scroll-down">
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="expertise section-padding">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Core <span>Expertise</span></h2>
+                <p>Delivering high-quality geospatial solutions across various domains.</p>
+            </div>
+            
+            <div class="expertise-grid">
+                <div class="expertise-card reveal" style="transition-delay: 0.1s;">
+                    <div class="icon-wrapper"><i class="fa-solid fa-earth-americas"></i></div>
+                    <h3>GIS & Spatial Analysis</h3>
+                    <p>Geospatial analysis of island morphology, area measurements, and typological classifications for accurate geospatial databases.</p>
+                </div>
+                <div class="expertise-card reveal" style="transition-delay: 0.2s;">
+                    <div class="icon-wrapper"><i class="fa-solid fa-satellite-dish"></i></div>
+                    <h3>Remote Sensing</h3>
+                    <p>Utilizing visible light, thermal satellite data, and digital image processing for coastal mapping and environmental monitoring.</p>
+                </div>
+                <div class="expertise-card reveal" style="transition-delay: 0.3s;">
+                    <div class="icon-wrapper"><i class="fa-solid fa-plane-up"></i></div>
+                    <h3>Drone Operations</h3>
+                    <p>Certified drone pilot experienced in high-precision polygon mapping, field surveys, and spatial data acquisition.</p>
+                </div>
+                <div class="expertise-card reveal" style="transition-delay: 0.4s;">
+                    <div class="icon-wrapper"><i class="fa-solid fa-microchip"></i></div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Implementing advanced analytical models and state-of-the-art machine learning techniques, including AI data annotation for automated detection.</p>
+                </div>
+            </div>
+            
+            <div class="tech-stack reveal">
+                <h4 style="text-align:center; margin-top:3rem; margin-bottom:1.5rem; color:var(--text-secondary); font-size:1.2rem;">Core Tools & Technologies</h4>
+                <div class="tech-icons">
+                    <span class="tech-badge"><i class="fa-solid fa-earth-americas"></i> ArcGIS / QGIS</span>
+                    <span class="tech-badge"><i class="fa-brands fa-python"></i> Python</span>
+                    <span class="tech-badge"><i class="fa-solid fa-plane"></i> Drone</span>
+                    <span class="tech-badge"><i class="fa-solid fa-brain"></i> Machine Learning</span>
+                    <span class="tech-badge"><i class="fa-solid fa-database"></i> Spatial Databases</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section section-padding" style="background: rgba(18, 18, 18, 0.4); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <h3><span class="counter" data-target="3">0</span></h3>
+                    <p>Small Islands Mapped</p>
+                </div>
+                <div class="stat-item reveal" style="transition-delay: 0.1s;">
+                    <h3><span class="counter" data-target="100">0</span>+</h3>
+                    <p>Flight Plans Executed</p>
+                </div>
+                <div class="stat-item reveal" style="transition-delay: 0.2s;">
+                    <h3><span class="counter" data-target="1000">0</span>+</h3>
+                    <p>Hectares Drone Mapping & Analysis</p>
+                </div>
+                <div class="stat-item reveal" style="transition-delay: 0.3s;">
+                    <h3><span class="counter" data-target="3">0</span></h3>
+                    <p>Key R&D Projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Experience Section -->
+    <section id="experience" class="experience section-padding">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Professional <span>Experience</span></h2>
+                <p>My journey in mapping the world and building geospatial solutions.</p>
+            </div>
+
+            <div class="timeline">
+                
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <img src="images/1.png" alt="GIS & Remote Sensing Project Development" class="timeline-img">
+                        <h3>GIS & Remote Sensing Project Development</h3>
+                        <p class="timeline-desc">Contributed to company projects utilizing advanced analytical models and state-of-the-art machine learning techniques. Developed web-based applications to improve field operational efficiency, and managed/optimized local server infrastructure.</p>
+                        <div class="tags">
+                            <span>Machine Learning</span>
+                            <span>Web Apps</span>
+                            <span>Server Infrastructure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <img src="images/2.png" alt="Marine Tracker 2.0 Project Manager" class="timeline-img">
+                        <h3>Marine Tracker 2.0 Project Manager & Technician</h3>
+                        <p class="timeline-desc">Oversaw spatial data acquisition using drones and CCTV monitoring. Designed a web-based app for automated debris detection using drone imagery. Contributed to AI development via data annotation and collaborated with CQUniversity for data-driven decision-making.</p>
+                        <div class="tags">
+                            <span>Project Management</span>
+                            <span>Drone & CCTV</span>
+                            <span>AI Data Annotation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <img src="images/3.jpg" alt="Jakarta River Mouths Survey" class="timeline-img">
+                        <h3>Jakarta River Mouths Survey</h3>
+                        <p class="timeline-desc">Orchestrated and executed comprehensive drone-based field surveys across 13 river mouths in Jakarta, optimizing spatial data collection efficiency.</p>
+                        <div class="tags">
+                            <span>Drone Survey</span>
+                            <span>Spatial Data</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <img src="images/4.png" alt="GlobalMeteOcean Collaboration" class="timeline-img">
+                        <h3>GlobalMeteOcean Collaboration</h3>
+                        <p class="timeline-desc">Developed a web-based service for source identification and trajectory forecasting of floating objects by integrating satellite data with open-source oceanographic datasets, supporting marine monitoring.</p>
+                        <div class="tags">
+                            <span>Satellite Data</span>
+                            <span>Oceanography</span>
+                            <span>Trajectory Forecasting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <img src="images/5.png" alt="National Island Inventory Initiative" class="timeline-img">
+                        <h3>National Island Inventory Initiative</h3>
+                        <p class="timeline-desc">Conducted high-precision polygon mapping of small Indonesian islands using satellite imagery. Performed geospatial analyses of island morphology and typological classifications for national databases.</p>
+                        <div class="tags">
+                            <span>Polygon Mapping</span>
+                            <span>Geospatial Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 6 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <img src="images/6.jpeg" alt="Spatial Mapping and Modeling Laboratory" class="timeline-img">
+                        <h3>Spatial Mapping and Modeling Laboratory</h3>
+                        <p class="timeline-desc">Supported research activities and provided analytical insights and technical guidance for undergraduate and master's research projects in geospatial modeling.</p>
+                        <div class="tags">
+                            <span>Research</span>
+                            <span>Technical Mentoring</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 7 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <img src="images/7.jpg" alt="Marine Practical Sessions Instructor" class="timeline-img">
+                        <h3>Marine Practical Sessions Instructor</h3>
+                        <p class="timeline-desc">Instructed students in remote sensing for coastal mapping, thermal satellite data for sea surface temperature, and digital image processing. Mentored on benthic habitat identification and marine resource surveys using drones and GIS.</p>
+                        <div class="tags">
+                            <span>Mentoring</span>
+                            <span>Digital Image Processing</span>
+                            <span>Coastal Ecosystem</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section id="projects-map" class="map-section section-padding">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Past <span>Field Surveys</span></h2>
+                <p>Interactive spatial view of my previous field surveys and mapping operations.</p>
+            </div>
+            <div class="map-container reveal">
+                <div id="gisMap"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="contact-box reveal">
+                <h2>Let's work <span>together</span></h2>
+                <p>Ready to leverage spatial data for your next big project? Reach out to discuss how GIS and Remote Sensing can provide actionable insights for you.</p>
+                <div class="contact-methods">
+                    <a href="mailto:sastraantara19@gmail.com" class="contact-btn">
+                        <i class="fa-solid fa-envelope"></i> Email Me
+                    </a>
+                    <a href="https://www.linkedin.com/in/sony-sastraantara/" target="_blank" class="contact-btn">
+                        <i class="fa-brands fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GIS & Remote Sensing Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="script.js"></script>
+</body>
+</html>
