@@ -232,3 +232,62 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// =========================================================================
+// ELITE UX UPGRADES
+// =========================================================================
+
+// 1. Back to Top Button
+document.addEventListener('DOMContentLoaded', () => {
+    const backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+});
+
+// 2. Animated Number Counters
+document.addEventListener('DOMContentLoaded', () => {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    let hasAnimated = false;
+
+    if (statNumbers.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !hasAnimated) {
+                    hasAnimated = true;
+                    statNumbers.forEach(stat => {
+                        const target = +stat.getAttribute('data-target');
+                        const duration = 2000; // 2 seconds
+                        const increment = target / (duration / 16); // ~60fps
+                        
+                        let current = 0;
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                stat.innerText = Math.ceil(current).toLocaleString();
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                stat.innerText = target.toLocaleString();
+                            }
+                        };
+                        updateCounter();
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+    }
+});
