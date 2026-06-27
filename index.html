@@ -7,6 +7,15 @@
     <!-- Vercel Web Analytics -->
     <script defer src="/_vercel/insights/script.js"></script>
     <meta name="description" content="Portfolio of a GIS & Remote Sensing Expert and Certified Drone Pilot based in Indonesia.">
+    <!-- Open Graph SEO -->
+    <meta property="og:title" content="Sony | GIS & Remote Sensing Expert">
+    <meta property="og:description" content="Portfolio of a GIS & Remote Sensing Expert and Certified Drone Pilot. Discover my projects in spatial mapping and drone analysis.">
+    <meta property="og:image" content="https://portofolio-gis.vercel.app/images/exp1_gis_server_1782453015755.png">
+    <meta property="og:url" content="https://portofolio-gis.vercel.app/">
+    <meta property="og:type" content="website">
+    
+    <!-- Custom Favicon (SVG) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23d4af37' d='M256 0c-14.5 0-27.6 8.5-33.3 21.9L202 64H112c-26.5 0-48 21.5-48 48v85.2l-37 28.5c-11.4 8.8-15 24.6-8.5 37.3s21.7 17.6 35.5 13.5l45.2-13.6 15.3 46 44.5-44.5C186.2 249 219.7 240 256 240s69.8 9 97 24.5l44.5 44.5 15.3-46 45.2 13.6c13.8 4.1 29-1.2 35.5-13.5s2.9-28.5-8.5-37.3l-37-28.5V112c0-26.5-21.5-48-48-48H310l-20.7-42.1C283.6 8.5 270.5 0 256 0zM144 144a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm224 0a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM256 288A112 112 0 1 0 256 512a112 112 0 1 0 0-224zm-48 112a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z'/></svg>" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -17,6 +26,12 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 </head>
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="radar-spinner"></div>
+        <p class="preloader-text">Initializing Spatial Data...</p>
+    </div>
+
     <!-- Custom Cursor -->
     <div class="cursor-dot" data-cursor-dot></div>
     <div class="cursor-outline" data-cursor-outline></div>
@@ -261,6 +276,33 @@
         </div>
     </section>
 
+    <!-- Tech Stack Marquee Section -->
+    <section class="section tech-section">
+        <div class="section-title reveal">
+            <h2>Software <span>Proficiency</span></h2>
+            <p>Industry-standard tools I use to turn spatial data into actionable insights</p>
+        </div>
+        <div class="marquee-container reveal">
+            <div class="marquee-track">
+                <div class="marquee-item"><i class="fa-solid fa-map"></i> ArcGIS Pro</div>
+                <div class="marquee-item"><i class="fa-solid fa-globe-americas"></i> QGIS</div>
+                <div class="marquee-item"><i class="fa-solid fa-camera"></i> Pix4Dmapper</div>
+                <div class="marquee-item"><i class="fa-solid fa-cubes"></i> Agisoft Metashape</div>
+                <div class="marquee-item"><i class="fa-brands fa-python"></i> Python (ArcPy/GeoPandas)</div>
+                <div class="marquee-item"><i class="fa-brands fa-google"></i> Google Earth Engine</div>
+                <div class="marquee-item"><i class="fa-solid fa-satellite-dish"></i> ENVI</div>
+                <!-- Duplicate for infinite effect -->
+                <div class="marquee-item"><i class="fa-solid fa-map"></i> ArcGIS Pro</div>
+                <div class="marquee-item"><i class="fa-solid fa-globe-americas"></i> QGIS</div>
+                <div class="marquee-item"><i class="fa-solid fa-camera"></i> Pix4Dmapper</div>
+                <div class="marquee-item"><i class="fa-solid fa-cubes"></i> Agisoft Metashape</div>
+                <div class="marquee-item"><i class="fa-brands fa-python"></i> Python (ArcPy/GeoPandas)</div>
+                <div class="marquee-item"><i class="fa-brands fa-google"></i> Google Earth Engine</div>
+                <div class="marquee-item"><i class="fa-solid fa-satellite-dish"></i> ENVI</div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact section-padding">
         <div class="container">
@@ -280,9 +322,14 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 GIS & Remote Sensing Portfolio. All rights reserved.</p>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">Hello, I'm <span>Sony</span></div>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/sony-sastraantara/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:sastraantara19@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 Sony Sastraantara. All rights reserved.</p>
         </div>
     </footer>
 

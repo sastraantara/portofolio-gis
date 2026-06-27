@@ -1,3 +1,15 @@
+// Preloader Logic
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        // Short artificial delay to let the animation play out beautifully
+        setTimeout(() => {
+            preloader.style.opacity = '0';
+            preloader.style.visibility = 'hidden';
+        }, 1200);
+    }
+});
+
 // Handle Navbar Background on Scroll
 const navbar = document.getElementById('navbar');
 
